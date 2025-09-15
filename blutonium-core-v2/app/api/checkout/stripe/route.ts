@@ -1,6 +1,11 @@
 import Stripe from 'stripe'
 import { NextResponse } from 'next/server'
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, { apiVersion:'2024-06-20' })
+
+// Stelle die aktuelle API-Version ein:
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '', {
+  apiVersion: '2025-08-27.basil'
+} as any)
+
 
 export async function POST(req: Request){
   const { items, customerEmail } = await req.json()
