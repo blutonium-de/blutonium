@@ -25,7 +25,7 @@ export default function HomePage() {
             {/* Logo */}
             <div className="mb-6">
               <img
-                src="/Blutonium_Records-Logo_app_20_years.png"
+                src="/logo.png"
                 alt="Blutonium Records Logo"
                 className="h-32 w-auto mx-auto"
               />
