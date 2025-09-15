@@ -17,14 +17,15 @@ export async function GET(req: Request) {
     if (data.items) albums.push(...data.items)
   }
 
-  // Deduplizieren
-  const unique = new Map(albums.map((a: any) => [a.id, a]))
-  const detailed = await Promise.all(
-    [...unique.values()].map(async (a: any) => {
-      const r = await fetch(`https://api.spotify.com/v1/albums/${a.id}`, { headers })
-      return await r.json()
-    })
-  )
+// neu
+const unique = new Map(albums.map((a: any) => [a.id, a]))
+const detailed = await Promise.all(
+  Array.from(unique.values()).map(async (a: any) => {
+    const r = await fetch(`https://api.spotify.com/v1/albums/${a.id}`, { headers })
+    return await r.json()
+  })
+)
+
 
   const releases = detailed.map((a: any) => ({
     id: a.id,
