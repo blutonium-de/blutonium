@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 
 export default function NavBar() {
@@ -16,9 +17,20 @@ export default function NavBar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-md border-b border-white/10">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo / Brand */}
-        <Link href="/" className="text-xl font-bold tracking-wide text-cyan-400 hover:text-cyan-300">
-          Blutonium
+        
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2">
+          <Image
+            src="/logo.png"
+            alt="Blutonium Records Logo"
+            width={36}
+            height={36}
+            priority
+            className="rounded"
+          />
+          <span className="hidden sm:inline text-sm font-bold tracking-wide text-white">
+            Blutonium Records
+          </span>
         </Link>
 
         {/* Links */}
@@ -35,7 +47,7 @@ export default function NavBar() {
             </Link>
           ))}
 
-          {/* Language Switcher (Dummy) */}
+          {/* Language Switcher */}
           <button className="ml-4 text-sm px-2 py-1 rounded bg-white/10 hover:bg-white/20">
             DE/EN
           </button>
