@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { getSpotifyToken, ARTISTS } from '../../../lib/spotify'
+import { getSpotifyToken, ARTISTS } from '../../lib/spotify'
 
 const RADIO_RE = /(radio|short|edit|single edit|video edit|cut|mix)/i
 
