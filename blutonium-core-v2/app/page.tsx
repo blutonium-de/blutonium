@@ -1,6 +1,9 @@
+import NavBar from "@/components/NavBar"
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-black text-white">
+      <NavBar />   {/* 👈 hier wird sie eingebunden */}
+
       {/* Hero */}
       <section className="relative overflow-hidden">
         {/* Hintergrundbild + Overlay */}
