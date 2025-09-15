@@ -1,14 +1,74 @@
 export default function HomePage() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-black text-white p-6">
-      <h1 className="text-4xl font-bold mb-4">Welcome to Blutonium Records</h1>
-      <p className="text-lg mb-6">Since 1995 – Hardstyle, Trance & Techno</p>
-      <nav className="space-x-4">
-        <a href="/releases" className="text-blutonium-500 hover:underline">Releases</a>
-        <a href="/merchandise" className="text-blutonium-500 hover:underline">Merchandise</a>
-        <a href="/samples" className="text-blutonium-500 hover:underline">Samples</a>
-        <a href="/videos" className="text-blutonium-500 hover:underline">Videos</a>
-      </nav>
+    <main className="min-h-screen bg-black text-white">
+      {/* Hero */}
+      <section className="relative overflow-hidden">
+        {/* BG: Bild wenn vorhanden, sonst Gradient */}
+        <div
+          className="absolute inset-0 bg-techno-1"
+          style={{
+            backgroundImage:
+              "url('/hero.jpg'), radial-gradient(60% 80% at 50% 0%, rgba(0,229,255,.25), rgba(0,0,0,0) 60%), radial-gradient(40% 50% at 80% 20%, rgba(180,0,255,.15), rgba(0,0,0,0) 60%), linear-gradient(180deg, #0b0b0d 0%, #000 100%)",
+            backgroundSize: "cover, auto, auto, auto",
+            backgroundPosition: "center, center, center, center",
+            backgroundBlendMode: "overlay, normal, normal, normal",
+            filter: "saturate(1.05)"
+          }}
+        />
+        <div className="relative max-w-6xl mx-auto px-6 pt-28 pb-20">
+          <div className="flex flex-col items-center text-center">
+            {/* Logo/Title */}
+            <div className="mb-6">
+              {/* Wenn du ein Logo hast, leg es als /public/logo.png ab und ersetze das H1 */}
+              <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight">
+                Blutonium Records
+              </h1>
+            </div>
+            <p className="max-w-2xl text-base sm:text-lg opacity-90">
+              Since 1995 — Hardstyle · Trance · Techno. Releases, Merch, Samples & Videos.
+            </p>
+
+            {/* CTAs */}
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+              <a href="/releases" className="btn">Releases</a>
+              <a href="/merchandise" className="btn">Merchandise</a>
+              <a href="/samples" className="btn">Hardstyle Samples</a>
+              <a href="/videos" className="btn">Videos</a>
+            </div>
+
+            {/* Badges / Links */}
+            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm opacity-80">
+              <a className="link" href="https://open.spotify.com/artist/2qNYTspRpXKdl4MJ6TGC5T" target="_blank" rel="noreferrer">Spotify</a>
+              <a className="link" href="https://music.apple.com" target="_blank" rel="noreferrer">Apple Music</a>
+              <a className="link" href="https://www.youtube.com/@BlutoniumRecords" target="_blank" rel="noreferrer">YouTube</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Feature-Raster */}
+      <section className="max-w-6xl mx-auto px-6 py-12 grid gap-6 md:grid-cols-3">
+        <article className="card p-6">
+          <h3 className="font-semibold mb-2">Aktuelle Veröffentlichungen</h3>
+          <p className="opacity-80 text-sm">Alle Radio/Edits mit Cover & direkten Spotify-Links.</p>
+          <a href="/releases" className="mt-4 inline-block link">Zu den Releases →</a>
+        </article>
+        <article className="card p-6">
+          <h3 className="font-semibold mb-2">Merch & Classics</h3>
+          <p className="opacity-80 text-sm">CDs, Compilations, Hoodies, Caps & Autogramme.</p>
+          <a href="/merchandise" className="mt-4 inline-block link">Zum Shop →</a>
+        </article>
+        <article className="card p-6">
+          <h3 className="font-semibold mb-2">Hardstyle Samples</h3>
+          <p className="opacity-80 text-sm">Blutonium pres. Hardstyle Samples Vol. 1 & 2 (Download).</p>
+          <a href="/samples" className="mt-4 inline-block link">Samples holen →</a>
+        </article>
+      </section>
+
+      {/* Footer */}
+      <footer className="px-6 py-10 opacity-70 text-sm text-center">
+        © {new Date().getFullYear()} Blutonium Records · Owner/Artist: Blutonium Boy
+      </footer>
     </main>
   )
 }
