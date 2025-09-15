@@ -1,0 +1,6 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+:root{color-scheme:dark} body{@apply bg-black text-zinc-100}
+.bg-techno-1{background:radial-gradient(60% 80% at 50% 0%,rgba(0,229,255,.25),rgba(0,0,0,0) 60%),radial-gradient(40% 50% at 80% 20%,rgba(180,0,255,.15),rgba(0,0,0,0) 60%),linear-gradient(180deg,#0b0b0d 0%,#000 100%)}
+.card{@apply bg-zinc-900/60 border border-zinc-800 rounded-xl shadow-md}
+.btn{@apply inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-zinc-700 hover:bg-zinc-800}
+.link{@apply underline decoration-dotted hover:decoration-solid}
