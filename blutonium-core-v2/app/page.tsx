@@ -11,7 +11,7 @@ export default function HomePage() {
             className="w-full h-full object-cover"
           />
           {/* Overlay: passe die Deckkraft nach Geschmack an (black/40 – black/70) */}
-          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-black/30" />
         </div>
 
         <div className="relative max-w-6xl mx-auto px-6 pt-28 pb-20">
