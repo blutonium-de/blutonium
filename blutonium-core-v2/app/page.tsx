@@ -1,30 +1,37 @@
 import NavBar from "@/components/NavBar"
+
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-black text-white">
-      <NavBar />   {/* 👈 hier wird sie eingebunden */}
+      {/* Navigation */}
+      <NavBar />
 
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        {/* Hintergrundbild + Overlay */}
-        <div className="absolute inset-0">
-          <img
-            src="/hero.jpg"
-            alt="Blutonium Hero"
-            className="w-full h-full object-cover"
-          />
-          {/* Overlay: passe die Deckkraft nach Geschmack an (black/40 – black/70) */}
-          <div className="absolute inset-0 bg-black/70" />
-        </div>
-
-        <div className="relative max-w-6xl mx-auto px-6 pt-28 pb-20">
+      <section className="relative overflow-hidden pt-16">
+        {/* BG: Hero-Bild + Overlays */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "url('/hero.jpg'), radial-gradient(60% 80% at 50% 0%, rgba(0,229,255,.25), rgba(0,0,0,0) 60%), radial-gradient(40% 50% at 80% 20%, rgba(180,0,255,.15), rgba(0,0,0,0) 60%), linear-gradient(180deg, #0b0b0d 0%, #000 100%)",
+            backgroundSize: "cover, auto, auto, auto",
+            backgroundPosition: "center, center, center, center",
+            backgroundBlendMode: "overlay, normal, normal, normal",
+            filter: "saturate(1.05)"
+          }}
+        />
+        <div className="relative max-w-6xl mx-auto px-6 pt-20 pb-20">
           <div className="flex flex-col items-center text-center">
+            {/* Logo */}
             <div className="mb-6">
-              <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight">
-                Blutonium Records
-              </h1>
+              <img
+                src="/Blutonium_Records-Logo_app_20_years.png"
+                alt="Blutonium Records Logo"
+                className="h-32 w-auto mx-auto"
+              />
             </div>
 
+            {/* Claim */}
             <p className="max-w-2xl text-base sm:text-lg opacity-90">
               Since 1995 — Hardstyle · Trance · Techno. Releases, Merch, Samples & Videos.
             </p>
