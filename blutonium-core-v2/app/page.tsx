@@ -7,19 +7,20 @@ export default function HomePage() {
       <NavBar />
 
       {/* Hero */}
+      {/* Hero */}
       <section className="relative overflow-hidden pt-16">
-        {/* BG: Hero-Bild + Overlays */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "url('/hero.jpg?V=2'), radial-gradient(60% 80% at 50% 0%, rgba(0,229,255,.25), rgba(0,0,0,0) 60%), radial-gradient(40% 50% at 80% 20%, rgba(180,0,255,.15), rgba(0,0,0,0) 60%), linear-gradient(180deg, #0b0b0d 0%, #000 100%)",
-            backgroundSize: "cover, auto, auto, auto",
-            backgroundPosition: "center, center, center, center",
-            backgroundBlendMode: "overlay, normal, normal, normal",
-            filter: "saturate(1.05)"
-          }}
-        />
+        {/* Hintergrundbild */}
+        <div className="absolute inset-0">
+          <img
+            src="/hero.jpg?v=2"
+            alt="Blutonium Hero"
+            className="w-full h-full object-cover"
+          />
+          {/* Overlay für Abdunklung */}
+          <div className="absolute inset-0 bg-black/60" />
+        </div>
+
+        {/* Inhalt */}
         <div className="relative max-w-6xl mx-auto px-6 pt-20 pb-20">
           <div className="flex flex-col items-center text-center">
             {/* Logo */}
@@ -53,6 +54,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
 
       {/* Feature-Raster */}
       <section className="max-w-6xl mx-auto px-6 py-12 grid gap-6 md:grid-cols-3">
