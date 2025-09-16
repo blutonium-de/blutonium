@@ -1,5 +1,7 @@
 'use client'
 import { useState } from 'react'
+import NavBar from "@/components/NavBar"
+
 
 type Img = { file?:File; url?:string; alt?:string }
 export default function AdminProducts(){
