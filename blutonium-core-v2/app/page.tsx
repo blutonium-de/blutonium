@@ -13,7 +13,7 @@ export default function HomePage() {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "url('/hero.jpg'), radial-gradient(60% 80% at 50% 0%, rgba(0,229,255,.25), rgba(0,0,0,0) 60%), radial-gradient(40% 50% at 80% 20%, rgba(180,0,255,.15), rgba(0,0,0,0) 60%), linear-gradient(180deg, #0b0b0d 0%, #000 100%)",
+              "url('/hero.jpg?V=2'), radial-gradient(60% 80% at 50% 0%, rgba(0,229,255,.25), rgba(0,0,0,0) 60%), radial-gradient(40% 50% at 80% 20%, rgba(180,0,255,.15), rgba(0,0,0,0) 60%), linear-gradient(180deg, #0b0b0d 0%, #000 100%)",
             backgroundSize: "cover, auto, auto, auto",
             backgroundPosition: "center, center, center, center",
             backgroundBlendMode: "overlay, normal, normal, normal",
