@@ -2,58 +2,62 @@
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-black text-white overflow-x-hidden">
+
       {/* Navigation */}
       <NavBar />
 
 {/* Hero */}
-<section className="relative overflow-hidden pt-16">
-  {/* Feste Höhe, damit das Bild Sichtfläche hat */}
-  <div className="relative w-full" style={{ height: "68vh", minHeight: 480 }}>
-    {/* Hintergrundbild */}
+<section className="relative pt-16">
+  {/* Hintergrund */}
+  <div className="absolute inset-0">
     <img
       src="/hero-2025-09-17.jpg"
       alt="Blutonium Hero"
-      className="absolute inset-0 w-full h-full object-cover object-center z-0"
+      className="w-full h-full object-cover object-center"
     />
-    {/* Abdunklungs-Overlay */}
-    <div className="absolute inset-0 bg-black/60 z-10" />
-   {/* Inhalt */}
-<div className="relative z-20 max-w-6xl w-full mx-auto px-6 h-full flex">
-  <div className="m-auto w-full text-center flex flex-col items-center">
-    {/* Logo */}
-    <div className="mb-6">
-      <img
-        src="/logo.png"
-        alt="Blutonium Records Logo"
-        className="h-32 w-auto mx-auto"
-      />
-    </div>
+    <div className="absolute inset-0 bg-black/60" />
+  </div>
 
-    {/* Claim */}
-    <p className="max-w-2xl text-base sm:text-lg opacity-90 mx-auto">
-      Since 1995 — Hardstyle · Trance · Techno. Releases, Merch, Samples & Videos.
-    </p>
+  {/* Inhalt */}
+  <div className="relative z-10">
+    <div className="max-w-6xl mx-auto px-6">
+      {/* Höhe = Viewport minus Nav (h-16 ≈ 64px) */}
+      <div className="min-h-[calc(100vh-4rem)] grid place-items-center text-center">
+        <div className="w-full max-w-3xl mx-auto">
+          {/* Logo */}
+          <div className="mb-6">
+            <img
+              src="/logo.png"
+              alt="Blutonium Records Logo"
+              className="h-32 w-auto mx-auto"
+            />
+          </div>
 
-    {/* CTAs */}
-    <div className="mt-8 flex flex-wrap items-center justify-center gap-3 w-full">
-      <a href="/releases" className="btn">Releases</a>
-      <a href="/merchandise" className="btn">Merchandise</a>
-      <a href="/samples" className="btn">Hardstyle Samples</a>
-      <a href="/videos" className="btn">Videos</a>
-    </div>
+          {/* Claim */}
+          <p className="max-w-2xl text-base sm:text-lg opacity-90 mx-auto">
+            Since 1995 — Hardstyle · Trance · Techno. Releases, Merch, Samples & Videos.
+          </p>
 
-    {/* Badges / Links */}
-    <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm opacity-80 w-full">
-      <a className="link" href="https://open.spotify.com/artist/2qNYTspRpXKdl4MJ6TGC5T" target="_blank" rel="noreferrer">Spotify</a>
-      <a className="link" href="https://music.apple.com" target="_blank" rel="noreferrer">Apple Music</a>
-      <a className="link" href="https://www.youtube.com/@BlutoniumRecords" target="_blank" rel="noreferrer">YouTube</a>
+          {/* CTAs */}
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <a href="/releases" className="btn">Releases</a>
+            <a href="/merchandise" className="btn">Merchandise</a>
+            <a href="/samples" className="btn">Hardstyle Samples</a>
+            <a href="/videos" className="btn">Videos</a>
+          </div>
+
+          {/* Badges */}
+          <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm opacity-80">
+            <a className="link" href="https://open.spotify.com/artist/2qNYTspRpXKdl4MJ6TGC5T" target="_blank" rel="noreferrer">Spotify</a>
+            <a className="link" href="https://music.apple.com" target="_blank" rel="noreferrer">Apple Music</a>
+            <a className="link" href="https://www.youtube.com/@BlutoniumRecords" target="_blank" rel="noreferrer">YouTube</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 </section>
-
-
 
       {/* Feature-Raster */}
       <section className="max-w-6xl mx-auto px-6 py-12 grid gap-6 md:grid-cols-3">
