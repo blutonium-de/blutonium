@@ -8,9 +8,9 @@ export default function HomePage() {
 
 {/* Hero */}
 <section className="relative overflow-hidden pt-16">
-  {/* Feste Höhe, damit das Bild sichtbar Platz hat */}
+  {/* Feste Höhe, damit das Bild Sichtfläche hat */}
   <div className="relative w-full" style={{ height: "68vh", minHeight: 480 }}>
-    {/* Hintergrundbild (sichtbar) */}
+    {/* Hintergrundbild */}
     <img
       src="/hero-2025-09-17.jpg"
       alt="Blutonium Hero"
@@ -18,31 +18,20 @@ export default function HomePage() {
     />
     {/* Abdunklungs-Overlay */}
     <div className="absolute inset-0 bg-black/60 z-10" />
-    {/* Inhalt oben drauf */}
+    {/* Inhalt */}
     <div className="relative z-20 max-w-6xl mx-auto px-6 h-full flex flex-col items-center justify-center text-center">
-      {/* Logo */}
       <div className="mb-6">
-        <img
-          src="/logo.png"
-          alt="Blutonium Records Logo"
-          className="h-32 w-auto mx-auto"
-        />
+        <img src="/logo.png" alt="Blutonium Records Logo" className="h-32 w-auto mx-auto" />
       </div>
-
-      {/* Claim */}
       <p className="max-w-2xl text-base sm:text-lg opacity-90">
         Since 1995 — Hardstyle · Trance · Techno. Releases, Merch, Samples & Videos.
       </p>
-
-      {/* CTAs */}
       <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
         <a href="/releases" className="btn">Releases</a>
         <a href="/merchandise" className="btn">Merchandise</a>
         <a href="/samples" className="btn">Hardstyle Samples</a>
         <a href="/videos" className="btn">Videos</a>
       </div>
-
-      {/* Badges / Links */}
       <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm opacity-80">
         <a className="link" href="https://open.spotify.com/artist/2qNYTspRpXKdl4MJ6TGC5T" target="_blank" rel="noreferrer">Spotify</a>
         <a className="link" href="https://music.apple.com" target="_blank" rel="noreferrer">Apple Music</a>
@@ -51,6 +40,7 @@ export default function HomePage() {
     </div>
   </div>
 </section>
+
 
 
       {/* Feature-Raster */}
