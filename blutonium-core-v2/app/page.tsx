@@ -7,7 +7,6 @@ export default function HomePage() {
       <NavBar />
 
       {/* Hero */}
-      {/* Hero */}
       <section className="relative overflow-hidden pt-16">
         {/* Hintergrundbild */}
         <div className="absolute inset-0">
