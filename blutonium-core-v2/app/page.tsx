@@ -6,45 +6,45 @@ export default function HomePage() {
       {/* Navigation */}
       <NavBar />
 
-      {/* Hero – Full-bleed, unabhängig vom zentrierten Layout-Container */}
-      <section className="relative pt-16 w-screen -ml-[calc(50vw-50%)]">
-        <div className="relative w-full" style={{ height: "68vh", minHeight: 480 }}>
-          {/* Hintergrundbild */}
-          <img
-            src="/hero-2025-09-17.jpg"
-            alt="Blutonium Hero"
-            className="absolute inset-0 w-full h-full object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-black/60" />
+      {/* Hero – Full-bleed Breakout aus dem zentrierten <main> des Layouts */}
+<div className="relative w-screen max-w-none left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+  <section className="relative pt-16">
+    <div className="relative w-full" style={{ height: "68vh", minHeight: 480 }}>
+      {/* Hintergrundbild */}
+      <img
+        src="/hero-2025-09-17.jpg"
+        alt="Blutonium Hero"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+      />
+      <div className="absolute inset-0 bg-black/60" />
 
-          {/* Inhalt */}
-          <div className="relative z-10 max-w-6xl mx-auto px-6 h-full flex flex-col items-center justify-center text-center">
-            <div className="mb-6">
-              <img
-                src="/logo.png"
-                alt="Blutonium Records Logo"
-                className="h-32 w-auto mx-auto"
-              />
-            </div>
-
-            <p className="max-w-2xl text-base sm:text-lg opacity-90 mx-auto">
-              Since 1995 — Hardstyle · Trance · Techno. Releases, Merch, Samples & Videos.
-            </p>
-
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <a href="/releases" className="btn">Releases</a>
-              <a href="/merchandise" className="btn">Merchandise</a>
-              <a href="/samples" className="btn">Hardstyle Samples</a>
-              <a href="/videos" className="btn">Videos</a>
-            </div>
-
-            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm opacity-80">
-              <a className="link" href="https://open.spotify.com/artist/2qNYTspRpXKdl4MJ6TGC5T" target="_blank" rel="noreferrer">Spotify</a>
-              <a className="link" href="https://music.apple.com" target="_blank" rel="noreferrer">Apple Music</a>
-              <a className="link" href="https://www.youtube.com/@BlutoniumRecords" target="_blank" rel="noreferrer">YouTube</a>
-            </div>
-          </div>
+      {/* Inhalt */}
+      <div className="relative z-10 max-w-6xl mx-auto px-6 h-full flex flex-col items-center justify-center text-center">
+        <div className="mb-6">
+          <img src="/logo.png" alt="Blutonium Records Logo" className="h-32 w-auto mx-auto" />
         </div>
+
+        <p className="max-w-2xl text-base sm:text-lg opacity-90 mx-auto">
+          Since 1995 — Hardstyle · Trance · Techno. Releases, Merch, Samples & Videos.
+        </p>
+
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <a href="/releases" className="btn">Releases</a>
+          <a href="/merchandise" className="btn">Merchandise</a>
+          <a href="/samples" className="btn">Hardstyle Samples</a>
+          <a href="/videos" className="btn">Videos</a>
+        </div>
+
+        <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm opacity-80">
+          <a className="link" href="https://open.spotify.com/artist/2qNYTspRpXKdl4MJ6TGC5T" target="_blank" rel="noreferrer">Spotify</a>
+          <a className="link" href="https://music.apple.com" target="_blank" rel="noreferrer">Apple Music</a>
+          <a className="link" href="https://www.youtube.com/@BlutoniumRecords" target="_blank" rel="noreferrer">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
       </section>
 
       {/* Feature-Raster (bleibt zentriert durch das <main> im layout.tsx) */}
