@@ -10,7 +10,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden pt-16">
         {/* Hintergrundbild */}
         <div className="absolute inset-0">
-         <img src="/hero-2025-09-17.jpg" alt="Blutonium Hero" className="w-full h-full object-cover" />
+         <img src="/hero.jpg" alt="Blutonium Hero" className="w-full h-full object-cover" />
 
           {/* Overlay für Abdunklung */}
           <div className="absolute inset-0 bg-black/60" />
