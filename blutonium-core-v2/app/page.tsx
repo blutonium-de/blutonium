@@ -18,27 +18,39 @@ export default function HomePage() {
     />
     {/* Abdunklungs-Overlay */}
     <div className="absolute inset-0 bg-black/60 z-10" />
-    {/* Inhalt */}
-    <div className="relative z-20 max-w-6xl mx-auto px-6 h-full flex flex-col items-center justify-center text-center">
-      <div className="mb-6">
-        <img src="/logo.png" alt="Blutonium Records Logo" className="h-32 w-auto mx-auto" />
-      </div>
-      <p className="max-w-2xl text-base sm:text-lg opacity-90">
-        Since 1995 — Hardstyle · Trance · Techno. Releases, Merch, Samples & Videos.
-      </p>
-      <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-        <a href="/releases" className="btn">Releases</a>
-        <a href="/merchandise" className="btn">Merchandise</a>
-        <a href="/samples" className="btn">Hardstyle Samples</a>
-        <a href="/videos" className="btn">Videos</a>
-      </div>
-      <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm opacity-80">
-        <a className="link" href="https://open.spotify.com/artist/2qNYTspRpXKdl4MJ6TGC5T" target="_blank" rel="noreferrer">Spotify</a>
-        <a className="link" href="https://music.apple.com" target="_blank" rel="noreferrer">Apple Music</a>
-        <a className="link" href="https://www.youtube.com/@BlutoniumRecords" target="_blank" rel="noreferrer">YouTube</a>
-      </div>
+   {/* Inhalt */}
+<div className="relative z-20 max-w-6xl w-full mx-auto px-6 h-full flex">
+  <div className="m-auto w-full text-center flex flex-col items-center">
+    {/* Logo */}
+    <div className="mb-6">
+      <img
+        src="/logo.png"
+        alt="Blutonium Records Logo"
+        className="h-32 w-auto mx-auto"
+      />
+    </div>
+
+    {/* Claim */}
+    <p className="max-w-2xl text-base sm:text-lg opacity-90 mx-auto">
+      Since 1995 — Hardstyle · Trance · Techno. Releases, Merch, Samples & Videos.
+    </p>
+
+    {/* CTAs */}
+    <div className="mt-8 flex flex-wrap items-center justify-center gap-3 w-full">
+      <a href="/releases" className="btn">Releases</a>
+      <a href="/merchandise" className="btn">Merchandise</a>
+      <a href="/samples" className="btn">Hardstyle Samples</a>
+      <a href="/videos" className="btn">Videos</a>
+    </div>
+
+    {/* Badges / Links */}
+    <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm opacity-80 w-full">
+      <a className="link" href="https://open.spotify.com/artist/2qNYTspRpXKdl4MJ6TGC5T" target="_blank" rel="noreferrer">Spotify</a>
+      <a className="link" href="https://music.apple.com" target="_blank" rel="noreferrer">Apple Music</a>
+      <a className="link" href="https://www.youtube.com/@BlutoniumRecords" target="_blank" rel="noreferrer">YouTube</a>
     </div>
   </div>
+</div>
 </section>
 
 
