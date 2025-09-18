@@ -6,6 +6,9 @@ export default function HomePage() {
     <main className="min-h-screen bg-black text-white overflow-x-hidden">
       {/* Navigation */}
       <NavBar />
+<div style={{background:'red',color:'white',padding:'5px'}}>
+  NEUES REMOTE PROJEKT
+</div>
 
       {/* Hero (randlos direkt unter der Navi) */}
       <section className="relative pt-16">
