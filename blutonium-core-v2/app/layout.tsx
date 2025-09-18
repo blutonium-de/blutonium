@@ -30,6 +30,7 @@ export default function RootLayout({
   BLUTONIUM (REMOTE)
 </Link>
 
+
             <div className="flex-1" />
             <Link href="/de/releases" className="hover:text-cyan-300">Releases</Link>
             <Link href="/de/merch" className="hover:text-cyan-300">Merchandise</Link>
