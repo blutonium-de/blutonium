@@ -26,9 +26,10 @@ export default function RootLayout({
         {/* Header */}
         <header className="sticky top-0 z-50 backdrop-blur bg-black/50 border-b border-white/10">
           <nav className="mx-auto max-w-6xl px-4 py-3 flex items-center gap-6">
-            <Link href="/de" className="font-bold tracking-widest text-cyan-400">
-              BLUTONIUM
-            </Link>
+           <Link href="/de" className="font-bold tracking-widest text-blutonium-500">
+  BLUTONIUM (REMOTE)
+</Link>
+
             <div className="flex-1" />
             <Link href="/de/releases" className="hover:text-cyan-300">Releases</Link>
             <Link href="/de/merch" className="hover:text-cyan-300">Merchandise</Link>
