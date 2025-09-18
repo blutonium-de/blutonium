@@ -135,7 +135,7 @@ export default function ReleasesPage() {
   }, [byYear, showCount])
 
   // Jahresanker + Year Rail highlight
-  const yearRefs = useRef<Map<number, HTMLDivElement>>(new Map())
+  const yearRefs = useRef<new Map<number, HTMLElement>>(new Map())
   const [activeYear, setActiveYear] = useState<number | null>(null)
   useEffect(() => {
     const io = new IntersectionObserver(
