@@ -33,7 +33,7 @@ type Tab = typeof TABS[number]
 export default function ReleasesPage() {
   const [releases, setReleases] = useState<Release[]>([])
   const [tab, setTab] = useState<Tab>("Alle")
-  const yearRefs = useRef<Record<string, HTMLDivElement | null>>({})
+  const yearRefs = useRef<Record<string, HTMLElement | null>>({})
 
   useEffect(() => {
     fetch("/api/releases")
