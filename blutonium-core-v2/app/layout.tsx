@@ -1,14 +1,13 @@
 // app/layout.tsx
 import "./globals.css"
-import Link from "next/link"
 import type { Metadata, Viewport } from "next"
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Blutonium Records",
   description: "Since 1995 — Hardstyle / Hardtrance",
 }
 
-// WICHTIG: sorgt für korrekte mobile Darstellung
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
@@ -23,21 +22,28 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de">
-      <body className="min-h-screen bg-techno-1 text-white antialiased">
-        <header className="sticky top-0 z-50 backdrop-blur bg-black/40 border-b border-zinc-800">
-          <nav className="max-w-6xl mx-auto px-4 py-3 flex items-center gap-6">
-            <Link href="/de" className="font-bold tracking-widest text-blutonium-500">
+      <body className="min-h-screen bg-black text-white antialiased">
+        {/* Header */}
+        <header className="sticky top-0 z-50 backdrop-blur bg-black/50 border-b border-white/10">
+          <nav className="mx-auto max-w-6xl px-4 py-3 flex items-center gap-6">
+            <Link href="/de" className="font-bold tracking-widest text-cyan-400">
               BLUTONIUM
             </Link>
             <div className="flex-1" />
-            <Link href="/de/releases">Releases</Link>
-            <Link href="/de/merch">Merchandise</Link>
-            <Link href="/de/samples">Samples</Link>
-            <Link href="/de/videos">Videos</Link>
+            <Link href="/de/releases" className="hover:text-cyan-300">Releases</Link>
+            <Link href="/de/merch" className="hover:text-cyan-300">Merchandise</Link>
+            <Link href="/de/samples" className="hover:text-cyan-300">Samples</Link>
+            <Link href="/de/videos" className="hover:text-cyan-300">Videos</Link>
           </nav>
         </header>
-        <main className="max-w-6xl mx-auto px-4 py-10">{children}</main>
-        <footer className="border-t border-zinc-800 py-10 mt-16 text-sm opacity-80">
+
+        {/* Main: KEIN max-w-Container, damit Hero vollflächig “breakouten” kann */}
+        <main className="min-h-[calc(100vh-4rem)]">
+          {children}
+        </main>
+
+        {/* Footer */}
+        <footer className="border-t border-white/10 py-10 mt-16 text-sm opacity-80">
           <div className="max-w-6xl mx-auto px-4">
             © {new Date().getFullYear()} Blutonium Records — Since 1995
           </div>
