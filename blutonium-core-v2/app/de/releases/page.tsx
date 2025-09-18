@@ -135,7 +135,7 @@ export default function ReleasesPage() {
   }, [byYear, showCount])
 
   // Jahresanker + Year Rail highlight
-  const yearRefs = useRef<new Map<number, HTMLElement>>(new Map())
+  const yearRefs = useRef(new Map<number, HTMLElement>(new Map())
   const [activeYear, setActiveYear] = useState<number | null>(null)
   useEffect(() => {
     const io = new IntersectionObserver(
@@ -253,7 +253,7 @@ export default function ReleasesPage() {
             {visibleByYear.map(([year, list]) => (
               <section
                 key={year}
-                ref={el => { if (el) yearRefs.current.set(year, el) }}
+                
                 data-year={year}
                 className="scroll-mt-24"
               >
