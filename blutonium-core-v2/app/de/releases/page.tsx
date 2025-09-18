@@ -253,7 +253,8 @@ export default function ReleasesPage() {
             {visibleByYear.map(([year, list]) => (
               <section
                 key={year}
-                
+                ref={el => { if (el) yearRefs.current.set(year, el as HTMLElement) }}
+
                 data-year={year}
                 className="scroll-mt-24"
               >
