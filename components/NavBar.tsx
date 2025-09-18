@@ -5,6 +5,7 @@ export default function NavBar() {
         <a href="/" className="font-bold text-xl">Blutonium</a>
         <div className="flex gap-6 text-sm">
           <a href="/releases" className="hover:text-cyan-400">Releases</a>
+          <a href="/artists" className="hover:text-cyan-400">Artists & Booking</a>
           <a href="/merchandise" className="hover:text-cyan-400">Merchandise</a>
           <a href="/samples" className="hover:text-cyan-400">Samples</a>
           <a href="/videos" className="hover:text-cyan-400">Videos</a>
